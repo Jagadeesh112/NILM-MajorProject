@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+{% block content %}
+
+    <section class="home-container">
+        <div class="home-row">
+            <div class="home-col-1">
+                <h1>Non-Intrusive Load Monitoring System</h1>
+                <h3>Process of estimating the energy consumed by individual appliances given just a whole-house power meter reading</h3>
+                <p>Identify the energy consumption of individual appliances given a whole-house power meter reading</p>
+                <a href="{{ url_for('predict_page') }}"><button type="button" class="home-get-started">Get Started</button></a>
+            </div>
+
+            <div class="home-col-2">
+                <img class="home-illustrator" src="{{url_for('static', filename='images/Illustration 1.png')}}" alt="illustrator 1">
+                <div class="home-color-box"></div>
+            </div>
+        </div>
+
+        <div class="about" id="about">
+
+            <h1 class="heading">About</h1>
+
+            <div class="about-bg">
+
+            <p>A non-intrusive load monitoring (NILM) system, also called energy
+                disaggregation systems, allows to obtain information relating to the power
+                absorption of individual appliances. The first NILM system was proposed by
+                George W. Hart in 1985. Load monitoring and identification is a method of determining electrical
+                energy consumption of individual appliances based on the analysis of composite
+                load measured from the main power meter in a building. They can supply information such as type of load, electricity consumption
+                details of the appliances to both the consumer and the utility. This information can
+                be used to formulate load plan strategies for optimal energy utilization. </p>
+                
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}
