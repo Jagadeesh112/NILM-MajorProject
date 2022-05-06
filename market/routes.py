@@ -105,8 +105,6 @@ def predict_page():
         values = loaded_model.predict(dftrain)
         
         labels = [i for i in range(len(values))]
-
-        values = [int(i) for i in values]
-
+        values = [i for i in values]
 
     return render_template('predict.html', file=file, values=values, labels=labels)

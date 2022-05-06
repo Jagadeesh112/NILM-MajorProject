@@ -17,9 +17,24 @@ h1{
 }  
 
 .home-container{
-    /* min-height: 800px; */
     margin: 5%;
     margin-top: 0;
+}
+
+.predict-container{
+    text-align: center;
+    margin: 5%;
+    margin-top: 0;
+}
+
+.predict-graph{
+    margin: 2%;
+    padding: 3%;
+}
+
+.predict-choose-file{
+    margin: 20px;
+
 }
 
 .home-row{

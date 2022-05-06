@@ -5,20 +5,25 @@
 
 {% block content %}
 
+    <div class="predict-container">
         <h1>Prediction page</h1>
-
-    <form action="/predict" method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <button type="submit">Submit</button>
-    </form>
-
-
-    <canvas id="predict-graph" width="400" height="400"></canvas>
+        
+        <form action="/predict" method="post" enctype="multipart/form-data">
+                <input type="file" class="predict-choose-file" name="file"><br>
+                <button type="submit" class="btn btn-md btn-primary">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+        
+    <div class="predict-graph">
+        <canvas id="predict-graph" width="400" height="400"></canvas>
+    </div>
 
     <script>
         const ctx = document.getElementById('predict-graph').getContext('2d');
         const myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: {{ labels | safe }},
                 datasets: [{
