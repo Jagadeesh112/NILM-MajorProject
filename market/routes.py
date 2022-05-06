@@ -1,11 +1,16 @@
+from cProfile import label
+from dataclasses import dataclass
 from distutils.command.upload import upload
 from fileinput import filename
 from msilib.schema import File
+from tkinter import Canvas
+from tkinter.messagebox import NO
 from unittest import result
+from click import style
 
 from sqlalchemy import null
 from market import app
-from flask import render_template, redirect, request, url_for, flash
+from flask import render_template, redirect, request, url_for, flash, Response
 from market.models import Item, User, Upload
 from market.forms import RegisterForm, LoginForm
 from market import db
@@ -14,6 +19,10 @@ import pandas as pd
 import pickle
 import sklearn
 from io import BytesIO
+import random
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+
 
 
 @app.route('/')
@@ -64,6 +73,7 @@ def login_page():
 
     return render_template('login.html', form=form)
 
+
 @app.route('/logout')
 def logout_page():
     logout_user()
@@ -75,11 +85,13 @@ def logout_page():
 def predict_page():
 
     file = None
-    predicted_value = None
+    values = None
+    labels = None
     if request.method == 'POST':
         file = request.files['file']
 
         upload = Upload(filename=file.filename, data=file.read(), owner=current_user.id)
+        file = upload
         db.session.add(upload)
         db.session.commit()
 
@@ -90,10 +102,11 @@ def predict_page():
     if file:
         loaded_model = pickle.load(open('ref_model', 'rb'))
         dftrain = pd.read_csv(BytesIO(file.data), usecols=[1, 2])
-        predicted_value = loaded_model.predict(dftrain)
-        # import matplotlib.pyplot as plt
-        # plt.plot(y_test_predict_3)
-        # plt.xlabel('No of data points')
-        # plt.ylabel('Power value')
+        values = loaded_model.predict(dftrain)
+        
+        labels = [i for i in range(len(values))]
 
-    return render_template('predict.html', file=file, predicted_value=predicted_value)
+        values = [int(i) for i in values]
+
+
+    return render_template('predict.html', file=file, values=values, labels=labels)
