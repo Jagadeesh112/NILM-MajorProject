@@ -19,7 +19,10 @@
             </div>
         </div>
 
-        <div class="about" id="about">
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
 
             <h1 class="heading">About</h1>
 
@@ -36,7 +39,130 @@
                 
             </div>
         </div>
-
     </section>
 
-{% endblock %}
+    <section id="advantages">
+
+            <div class="advantages-row">
+        
+              <div class="advantages-col1">
+                  <img src="{{url_for('static', filename='images/Illustration 2.png')}}" alt="illustration 2">
+              </div>
+        
+              <div class="advantages-col2">
+                  <h1 class="heading">Advantages</h1>
+
+                  <div >
+
+                    <ul>
+                        <li class="list-group-item"> <i class="fa-solid fa-square-check"></i> Appliance Load Monitoring (ALM) leads to the identification of high-energy consuming appliances.</li>
+                        <li class="list-group-item"> <i class="fa-solid fa-square-check"></i> Reduction in energy wastage can be achieved through monitoring energy consumption and relaying this information back to customers.</li>
+                        <li class="list-group-item"> <i class="fa-solid fa-square-check"></i> It helps the user to make a financial decision for when to use an appliance.</li>
+                        <li class="list-group-item"> <i class="fa-solid fa-square-check"></i> It helps the user to understand bills.</li>
+                        <li class="list-group-item"> <i class="fa-solid fa-square-check"></i> With the help NILM user could plan their monthly budget.</li>
+                        <li class="list-group-item"> <i class="fa-solid fa-square-check"></i> It can be used to formulate load plan strategies for optimal energy utilization.</li>
+                      </ul>
+                
+                </div>
+              </div>
+            </div>
+    </section>
+
+    <section class="three">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="content">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Utility company</h5>
+                              <p class="card-text">The utility company can estimate demand response potential in some locations from the fine information on the appliance levels.</p>
+                            </div>
+                        </div>                          
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="content">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Government</h5>
+                              <p class="card-text">Governments spend billions of dollars on energy efficiency (EE) program every year. The fine load monitoring through NILM can help the government make wise decisions on EE policies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="content">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Appliance company</h5>
+                              <p class="card-text">Household electricity consumption information can prompt manufactures to speed up the study of high-performance equipment and guide the change of market of household appliance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contacts" id="contacts">
+
+        <div class="contact-row">
+            
+            <div class="contact-col1">
+                <div class="college">
+                    <div>
+                        <a href="https://iiitdwd.ac.in/">   
+                            <img class="logo bottom-logo" src="{{url_for('static', filename='images/iiitdwd_logo.png')}}" alt="logo">
+                        </a>
+                    </div>
+                    <div>
+                        <h4>IIIT DHARWAD</h4>
+                        <a href="https://iiitdwd.ac.in/">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-col2">
+                <div class="me">
+                    <div class="me1">
+                        <div class="card  mb-3" style="max-width: 18rem;">
+                            <div class="card-body">
+                            <h5 class="card-title">Jagadeesh C</h5>
+                            <a href="mailto:18bcs033@iiitdwd.ac.in">Mail</a> | 
+                            <a href="">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me1">
+                        <div class="card mb-3" style="max-width: 18rem;">
+                            <div class="card-body">
+                            <h5 class="card-title">Nikhil S</h5>
+                            <a href="mailto:18bec033@iiitdwd.ac.in">Mail</a> | 
+                            <a href="">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me1">
+                        <div class="card mb-3" style="max-width: 18rem;">
+                            <div class="card-body">
+                            <h5 class="card-title">Arun Kumar S M</h5>
+                            <a href="mailto:18bcs013@iiitdwd.ac.in">Mail</a> | 
+                            <a href="">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                      
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    {% endblock %}
+    

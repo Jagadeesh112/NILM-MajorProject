@@ -1,17 +1,7 @@
-from cProfile import label
-from dataclasses import dataclass
-from distutils.command.upload import upload
-from fileinput import filename
-from msilib.schema import File
-from tkinter import Canvas
-from tkinter.messagebox import NO
-from unittest import result
-from click import style
-
 from sqlalchemy import null
 from market import app
 from flask import render_template, redirect, request, url_for, flash, Response
-from market.models import Item, User, Upload
+from market.models import User, Upload
 from market.forms import RegisterForm, LoginForm
 from market import db
 from flask_login import current_user, login_user, logout_user, login_required
@@ -29,13 +19,6 @@ from matplotlib.figure import Figure
 @app.route('/home')
 def home_page():
     return render_template('home.html')
-
-
-@app.route('/market')
-@login_required
-def market_page():
-    items = Item.query.all()
-    return render_template('market.html', items=items)
 
 
 @app.route('/register', methods=['GET', 'POST'])

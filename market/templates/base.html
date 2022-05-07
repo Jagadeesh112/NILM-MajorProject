@@ -13,13 +13,18 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/stocktools/gui.css">
         <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/annotations/popup.css">
-    
+        <link rel="manifest" href="/site.webmanifest">
 
         <title>
             {% block title %}
             
             {% endblock %}
         </title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='favicon/apple-touch-icon.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon/favicon-32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon/favicon-16x16.png')}}">
+
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,19 +33,10 @@
 
 
         <!-- font awsome - for social icon -->
-        <script src="https://kit.fontawesome.com/701375cb27.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/3f2cf23374.js" crossorigin="anonymous"></script>
+
         <!-- chart.js for graphs -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!-- high charts -->
-        <script src="https://code.highcharts.com/stock/highstock.js"></script>
-        <script src="https://code.highcharts.com/stock/modules/data.js"></script>
-        <script src="https://code.highcharts.com/stock/indicators/indicators-all.js"></script>
-        <script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
-        <script src="https://code.highcharts.com/stock/modules/annotations-advanced.js"></script>
-        <script src="https://code.highcharts.com/stock/modules/price-indicator.js"></script>
-        <script src="https://code.highcharts.com/stock/modules/full-screen.js"></script>
-        <script src="https://code.highcharts.com/stock/modules/stock-tools.js"></script>
-    
 
 
     </head>
@@ -61,20 +57,20 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="/home#about">About</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Advantages</a>
+                        <a class="nav-link" href="/home#advantages">Advantages</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="/home#contacts">Contact</a>
                     </li>
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="http://redd.csail.mit.edu/">REDD</a>
-                    </li>
+                    </li> -->
                 </ul>
 
                 {% if current_user.is_authenticated %}
@@ -117,7 +113,7 @@
             
             {% endblock %}
 
-            <!-- Future Content here -->
+
             
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

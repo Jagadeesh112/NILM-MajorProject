@@ -16,7 +16,7 @@ h1{
     padding: 1% 4%;
 }  
 
-.home-container{
+.home-container, .about-container{
     margin: 5%;
     margin-top: 0;
 }
@@ -37,7 +37,7 @@ h1{
 
 }
 
-.home-row{
+.home-row, .advantages-row{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,6 +48,13 @@ h1{
     flex-basis: 40%;
     position: relative;
     margin-left: 50px;
+}
+
+.home-col-2{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
 }
 
 .home-col-1 h1{
@@ -92,13 +99,6 @@ h1{
     position: absolute;
     left: -40px;
     top: 8px;
-}
-
-.home-col-2{
-    position: relative;
-    flex-basis: 60%;
-    display: flex;
-    align-items: center;
 }
 
 .home-col-2 .home-illustrator{
@@ -156,39 +156,154 @@ h1{
 
 /* ************************ about ************************ */
 
-.about{
-    background-color: rgb(238, 238, 238);
+.about-container{
+    background-color: rgb(243, 243, 243);
     padding: 7% 10.5%;
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 400px;
-  }
-  
-  .about h1{
-    margin: 0;
-  }
-  
-  .about .flex p{
-    width: 80%;
-  }
-  
-  .about .flex{
+}
+
+.about{
+    margin-top: 10%;
+}
+
+.heading{
+    font-family: 'Sacramento', cursive;
+    font-size: 54px;
+    font-weight: bold;
+}
+
+/* ************************ Advantages ************************ */
+.advantages-row{
+    margin: 10% 5%;   
+}
+
+.advantages-col1{
+    flex-basis: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* padding: 5%; */
+}
+
+.advantages-col1 img{
+    width: 100%;
+}
+
+.advantages-col2{
+    padding: 5%;
+}
+
+.list-group-item{
+    border: none;
+}
+
+.fa-square-check{
+    color: #ff3527;
+    margin: 10px;
+}
+
+/* ************************ Advantages ************************ */
+
+.three{
+    margin: 5%;
+}
+
+.three .row {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgb(195, 195, 195);
+}
+
+.three .card{
+    border-color: #ff3527;
+}
+
+
+/* ************************ Advantages ************************ */
+
+.framework{
+    margin: 10%;
+    text-align: center;
+}
+
+.framework .row{
+
+    /* text-align: center; */
+}
+
+/* ************************ contacts ************************ */
+
+.contacts{
+    margin-top: 10%;
+    padding: 2%;
+    text-align: center;
+    background-color: #ff6062;
+}
+
+.contacts .contact-row{
+    padding: 2% 12% 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80px;
+    margin-right: 30px;
+}
+
+.contacts .college h4{
+    font-weight: bold;
+}
+
+.college{
     display: flex;
     justify-content: space-between;
-  }
-  
-  .about ul{
-    list-style-type: square;
-  }
-  
-  .about .hart{
-    padding-top: 40px;
-  }
-  
-  .about .about-bg p{
-    color: black;
-  }
-  
+    align-items: center;
+    text-align: left;
+}
+
+.college a{
+    color: #707070;
+    text-decoration: none;
+}
+
+.college a:hover{
+    color: #b7b7b7;
+}
+
+.me{
+    display: flex;
+    justify-content: space-between;
+}
+
+.me1{
+    margin: auto 10px;
+}
+
+.me1:last-child{
+    margin-right: 0;
+}
+
+.me .me1 h5{
+    font-size: 1.2rem;
+    color: #ff3527;
+}
+
+.me .me1 a{
+    color: #707070;
+    text-decoration: none;
+}
+
+.me .me1 a:hover{
+    color: #b7b7b7;
+}
+
+
 
 @media only screen and (max-width: 700px){
 
