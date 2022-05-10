@@ -105,7 +105,86 @@
             </div>
         </div>
     </section>
+    
+    <section class="framework">
 
+        <h1>GENERAL FRAMEWORK OF NILM</h1>
+        <p>A typical or general framework of NILM includes three steps to implement a practical NILM system</p>
+        <p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Data Acquisition</a><i class="fa-solid fa-arrow-right"></i>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Feature Extraction</button><i class="fa-solid fa-arrow-right"></i>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Load Identification</button>
+            <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button> -->
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    Data acquisition is a stage of obtaining
+                    aggregated load measurements from the household at a given
+                    time interval. During this stage, voltage and current
+                    measurements are obtained and processed to produce the
+                    power metrics. The steady-state or transient changes in the
+                    pre-processed signals, corresponds to the operation of
+                    individual appliances.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                    Appliance identification can be made by
+                    using an algorithm and comparing the energy consumption of
+                    each appliance with known features of a typical appliances in
+                    the data.                     
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                    Load identification refers to learning
+                    and inference stage of NILM system by means of supervised
+                    and unsupervised, or semi-supervised learning approaches.
+                    The ultimate goal of NILM system is to identify and
+                    disaggregate load with unsupervised learning.                     
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </section>
+
+    <section class="redd">
+
+        <div class="container">
+            <div class="row">
+
+              <div class="col-sm" style="text-align: left;">
+                <h1>REDD</h1>
+                <h6>Reference Energy Disaggregation Data Set</P>
+                <p>REDD dataset used for training the model</p>
+                <a class="btn btn-info" href="http://redd.csail.mit.edu/">Visit website</a>
+              </div>
+
+              <div class="col-sm" style="text-align: right;">
+                REDD, a data set for energy disaggregation. The data contains
+                power consumption from real homes, for the whole house as
+                well as for each individual circuit in the house.
+                The dataset directory contains average power readings for
+                both the two power mains and the individual circuits of the
+                house. The main directory consists of several 6 houses
+                directories, each of which contain all the power readings for a
+                single house. Each house subdirectory consists of a labels.dat
+                and several channels_i.dat files. The labels file contains
+                channel numbers and a text label indicating the general
+                category of device on this channel.
+              </div>
+
+            </div>
+          </div>
+
+    </section>
 
 
     <section class="contacts" id="contacts">
@@ -140,7 +219,7 @@
                     <div class="me1">
                         <div class="card mb-3" style="max-width: 18rem;">
                             <div class="card-body">
-                            <h5 class="card-title">Nikhil S</h5>
+                            <h5 class="card-title">Nikhil S A</h5>
                             <a href="mailto:18bec033@iiitdwd.ac.in">Mail</a> | 
                             <a href="https://github.com/ambigarnikhil">GitHub</a>
                             </div>
@@ -155,14 +234,13 @@
                             </div>
                         </div>
                     </div>
-                      
-
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
+
+    <!-- chatbot -->
+    <script> window.initBot = function() { if (window.wizBot && window.wizBot.botplatform) { window.wizBot.botplatform.init({});} }; window.exitBot = function() { if (window.wizBot && window.wizBot.botplatform) {window.wizBot.botplatform.exit({}); } } </script><script>(function(){var randomh=Math.random();var e = document.getElementsByTagName("script")[0];var d = document.createElement("script");d.src ="https://test.wizergos.net/static/botassets/js/embed.js?app_board_id=11ec9f56-00a4-c8ea-a759-0242ac150004&app_key=mUrnyWivuV4K7b1h8ha314DEexVkcYuHZ9R4Ge9YZsb853oQtEjhEc5vJlmi8WapcExDXoaub5jmgt625UF4C4aB8WvSQr81tn9CRjOgQipRNEKoTHcDKx07Xq6g7e6ujLKL05zyC6iKa5TKEgxQksC01irw6WrBj2qEooIVKV5mwuZXT2wbGAgjDSM1La2XwDH1XWJfMJfzDXrZzJOaksBfzg9bZyrW1mSSyJX6FQbK6fuZQRjsgJ7AfVceg4DR"+"&v=" + randomh;e.parentNode.insertBefore(d,e);})();</script>
     
-    
-    
-    {% endblock %}
+{% endblock %}
     

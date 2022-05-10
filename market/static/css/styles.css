@@ -176,7 +176,8 @@ h1{
 
 /* ************************ Advantages ************************ */
 .advantages-row{
-    margin: 10% 5%;   
+    margin: 10% 5%;
+    margin-bottom: 0;   
 }
 
 .advantages-col1{
@@ -204,7 +205,7 @@ h1{
     margin: 10px;
 }
 
-/* ************************ Advantages ************************ */
+/* ************************ three ************************ */
 
 .three{
     margin: 5%;
@@ -212,8 +213,10 @@ h1{
 
 .three .row {
     padding: 50px;
+    /* padding: 5%; */
     background-color: white;
     text-align: center;
+    /* background-color: rgb(248, 248, 248); */
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgb(195, 195, 195);
 }
@@ -222,18 +225,96 @@ h1{
     border-color: #ff3527;
 }
 
+.three .card-text{
+    min-height: 140px;
+}
 
-/* ************************ Advantages ************************ */
+.fa-arrow-right{
+    margin: 10px 20px;
+    color: #707070;
+}
+
+
+/* ************************ framework ************************ */
 
 .framework{
+    padding: 10%;
+    text-align: center;
+    background-color: rgb(248, 248, 248);
+}
+
+.framework .card-body{
+    min-height: 240px;
+    color: black;
+    background-color: #dfdfdf;
+}
+
+.framework p{
+    color: #b7b7b7;
+    margin-bottom: 40px;
+}
+
+
+.framework .btn.btn-primary, .redd .btn.btn-info{
+    color: #fff;
+    background-color: #ff3527;
+    border-color: #ff3527;
+}
+
+.framework .btn.btn-primary.focus, .redd .btn.btn-info.focus,
+.framework .btn.btn-primary:focus, .redd .btn.btn-info:focus {
+    color: #fff;
+    background-color: #ff6062;
+    border-color: #ff6062;
+    outline: none;
+    box-shadow: none;
+}
+
+.framework .btn.btn-primary:hover, .redd .btn.btn-info:hover {
+    color: #fff;
+    background-color: #ff6062;
+    border-color: #ff6062;
+    outline: none;
+    box-shadow: none;
+}
+
+.framework .btn.btn-primary.active, .redd .btn.btn-info.active,
+.framework .btn.btn-primary:active, .redd .btn.btn-info:active {
+    color: #fff;
+    background-color: #ff6062;
+    border-color: #ff6062;
+    outline: none;
+}
+
+.framework .btn.btn-primary.active.focus, .redd .btn.btn-info.active.focus,
+.framework .btn.btn-primary.active:focus, .redd .btn.btn-info.active:focus,
+.framework .btn.btn-primary.active:hover, .redd .btn.btn-info.active:hover,
+.framework .btn.btn-primary:active.focus, .redd .btn.btn-info:active.focus,
+.framework .btn.btn-primary:active:focus, .redd .btn.btn-info:active:focus,
+.framework .btn.btn-primary:active:hover, .redd .btn.btn-info:active:hover {
+    color: #fff;
+    background-color: #ff6062;
+    border-color: #ff6062;
+    outline: none;
+    box-shadow: none;
+}
+  
+/* ************************ redd ************************ */
+
+.redd{
     margin: 10%;
     text-align: center;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgb(195, 195, 195);
+    border: 1px solid #ff3527;
 }
 
-.framework .row{
-
-    /* text-align: center; */
+.redd .col-sm p{
+    color: #b7b7b7;
 }
+
+
 
 /* ************************ contacts ************************ */
 
