@@ -8,10 +8,9 @@
     <div class="predict-container">
         <h1>Prediction page</h1>
         
-        <form action="/predict" method="post" enctype="multipart/form-data">
-                <input type="file" class="predict-choose-file" name="file"><br>
-                <button type="submit" class="btn btn-md btn-primary">Submit</button>
-            </div>
+        <form action="/predict" method="post" enctype="multipart/form-data">                
+            <input type="file" class="predict-choose-file" name="file" id="file" required><br>
+            <button type="submit" class="btn btn-md btn-primary">Submit</button>
         </form>
         
     </div>

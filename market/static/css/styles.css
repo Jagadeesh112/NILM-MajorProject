@@ -21,9 +21,13 @@ h1{
     margin-top: 0;
 }
 
+.predict-choose-file{
+    margin: 20px;
+}
+
 .predict-container{
     text-align: center;
-    margin: 5%;
+    margin: 10%;
     margin-top: 0;
 }
 
@@ -32,9 +36,8 @@ h1{
     padding: 3%;
 }
 
-.predict-choose-file{
-    margin: 20px;
-
+.navbar-toggler-icon{
+    background-color: #ff3527;
 }
 
 .home-row, .advantages-row{
@@ -246,7 +249,7 @@ h1{
 .framework .card-body{
     min-height: 240px;
     color: black;
-    background-color: #dfdfdf;
+    border: 1px solid #ff3527;
 }
 
 .framework p{
@@ -326,11 +329,24 @@ h1{
 }
 
 .contacts .contact-row{
-    padding: 2% 12% 10%;
+    padding: 2% 10% 10%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
+
+.contacts .contact-row .contact-col1{
+    flex-basis: 50%;
+    position: relative;
+}
+
+/* .contacts .contact-row .contact-col2{
+    position: relative;
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+} */
+
 
 .logo {
     width: 80px;
@@ -349,12 +365,19 @@ h1{
 }
 
 .college a{
-    color: #707070;
+    color: #dfdfdf;
     text-decoration: none;
 }
 
 .college a:hover{
     color: #b7b7b7;
+}
+
+.about-college{
+    width: 60%;
+    margin-top: 10px;
+    text-align: left;
+    /* margin-right: auto; */
 }
 
 .me{

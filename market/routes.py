@@ -70,13 +70,16 @@ def predict_page():
     file = None
     values = None
     labels = None
+
     if request.method == 'POST':
         file = request.files['file']
-
-        upload = Upload(filename=file.filename, data=file.read(), owner=current_user.id)
-        file = upload
-        db.session.add(upload)
-        db.session.commit()
+        if file:
+            upload = Upload(filename=file.filename, data=file.read(), owner=current_user.id)
+            file = upload
+            db.session.add(upload)
+            db.session.commit()
+        else:
+            flash("Please select a csv file", category='info')
 
     if request.method == 'GET':
         if current_user.files:

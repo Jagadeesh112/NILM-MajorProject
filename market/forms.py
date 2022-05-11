@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
+from matplotlib.pyplot import cla
+from wtforms import StringField, PasswordField, SubmitField, FileField
 from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError
 from market.models import User
 
@@ -26,3 +27,7 @@ class LoginForm(FlaskForm):
     username = StringField(label='User Name:', validators=[DataRequired()])
     password = PasswordField(label='Password:', validators=[DataRequired()])
     submit = SubmitField(label='Sign in')
+
+# class UploadForm(FlaskForm):
+#     file = FileField("File", validators=[DataRequired()])
+#     submit = SubmitField("Upload")
