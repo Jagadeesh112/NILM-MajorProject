@@ -157,6 +157,11 @@ h1{
     color: red;
 }
 
+.predict-container p{
+    color: #b7b7b7;
+}
+
+
 /* ************************ about ************************ */
 
 .about-container{
@@ -175,6 +180,25 @@ h1{
     font-family: 'Sacramento', cursive;
     font-size: 54px;
     font-weight: bold;
+}
+
+.about-college p{
+    margin: 0;
+}
+
+.about-college{
+    width: 60%;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.about-college p a{
+    color: black;
+    text-decoration: none;
+}
+
+.about-college p a:hover{
+    color: #b7b7b7;
 }
 
 /* ************************ Advantages ************************ */
@@ -371,13 +395,6 @@ h1{
 
 .college a:hover{
     color: #b7b7b7;
-}
-
-.about-college{
-    width: 60%;
-    margin-top: 10px;
-    text-align: left;
-    /* margin-right: auto; */
 }
 
 .me{
